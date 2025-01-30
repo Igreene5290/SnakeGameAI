@@ -8,6 +8,7 @@ from Helper import plot
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
 LR = 0.001
+device = "cpu"
 
 class Agent:
     def __init__(self):
@@ -99,8 +100,8 @@ class Agent:
             move = random.randint(0,2)
             final_move[move]=1
         else:
-            state0 = torch.tensor(state,dtype=torch.float).cuda()
-            prediction = self.model(state0).cuda() # prediction by model 
+            state0 = torch.tensor(state,dtype=torch.float).to(device)
+            prediction = self.model(state0).to(device) # prediction by model 
             move = torch.argmax(prediction).item()
             final_move[move]=1 
         return final_move
