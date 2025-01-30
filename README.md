@@ -4,7 +4,8 @@ AI driven snake game using Reinforcement Learning and Deep Q Learning.<br>
 This code uses Q Learning Algorithm
 
 <br>
-# ** Notes**
+
+# Notes
 * At first the model had 2 problems: running into walls and being unable to find the apple
 * These were solved in time, but with this another problem was created that the model seemed unable to figure out in the time I provided
 * It seems to struggle a lot with running into itself once it became long enough
