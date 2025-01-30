@@ -14,7 +14,7 @@ This code uses Q Learning Algorithm
 * Its high score was 51!
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+
 <hr />
 <p>
   <h2>Result</h2>
