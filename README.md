@@ -3,7 +3,7 @@ AI driven snake game using Reinforcement Learning and Deep Q Learning.<br>
 
 # References
 [Original Code Repo](https://github.com/vedantgoswami/SnakeGameAI.git):<br>
-This code uses Q Learning Algorithm<br>
+This code uses Q Learning Algorithm<br><br>
 [Wandb Training](https://wandb.ai/igreene5290-ohio-university/Snake-Game-Ai/panel/q9ol4o8ve):<br>
 Tracks Score, Mean Score, Reward, and Games Played
 
