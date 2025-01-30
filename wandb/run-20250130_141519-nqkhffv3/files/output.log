@@ -1,0 +1,14 @@
+False
+False
+False
+False
+C:\Users\igree\Desktop\CS4900\PA1\SnakeGameAI\model.py:37: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:257.)
+  state = torch.tensor(state,dtype=torch.float).to(device)
+Game: 1 Score: 0 Record: 0
+Figure(640x480)
+Game: 2 Score: 0 Record: 0
+Figure(640x480)
+Game: 3 Score: 0 Record: 0
+Figure(640x480)
+Game: 4 Score: 0 Record: 0
+Figure(640x480)

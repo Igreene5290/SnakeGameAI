@@ -1,0 +1,74 @@
+False
+False
+False
+False
+C:\Users\igree\Desktop\CS4900\PA1\SnakeGameAI\model.py:37: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:257.)
+  state = torch.tensor(state,dtype=torch.float).to(device)
+Game: 1 Score: 0 Record: 0
+Figure(640x480)
+Game: 2 Score: 0 Record: 0
+Figure(640x480)
+Game: 3 Score: 0 Record: 0
+Figure(640x480)
+Game: 4 Score: 0 Record: 0
+Figure(640x480)
+Game: 5 Score: 0 Record: 0
+Figure(640x480)
+Game: 6 Score: 0 Record: 0
+Figure(640x480)
+Game: 7 Score: 0 Record: 0
+Figure(640x480)
+Game: 8 Score: 0 Record: 0
+Figure(640x480)
+Game: 9 Score: 0 Record: 0
+Figure(640x480)
+Game: 10 Score: 0 Record: 0
+Figure(640x480)
+Game: 11 Score: 0 Record: 0
+Figure(640x480)
+Game: 12 Score: 0 Record: 0
+Figure(640x480)
+Game: 13 Score: 0 Record: 0
+Figure(640x480)
+Game: 14 Score: 0 Record: 0
+Figure(640x480)
+Game: 15 Score: 1 Record: 0
+Figure(640x480)
+Game: 16 Score: 0 Record: 0
+Figure(640x480)
+Game: 17 Score: 0 Record: 0
+Figure(640x480)
+Game: 18 Score: 1 Record: 0
+Figure(640x480)
+Game: 19 Score: 0 Record: 0
+Figure(640x480)
+Game: 20 Score: 0 Record: 0
+Figure(640x480)
+Game: 21 Score: 1 Record: 0
+Figure(640x480)
+Game: 22 Score: 1 Record: 0
+Figure(640x480)
+Game: 23 Score: 0 Record: 0
+Figure(640x480)
+Game: 24 Score: 1 Record: 0
+Figure(640x480)
+Game: 25 Score: 1 Record: 0
+Figure(640x480)
+Game: 26 Score: 1 Record: 0
+Figure(640x480)
+Game: 27 Score: 0 Record: 0
+Figure(640x480)
+Game: 28 Score: 1 Record: 0
+Figure(640x480)
+Game: 29 Score: 0 Record: 0
+Figure(640x480)
+Game: 30 Score: 1 Record: 0
+Figure(640x480)
+Game: 31 Score: 1 Record: 0
+Figure(640x480)
+Game: 32 Score: 0 Record: 0
+Figure(640x480)
+Game: 33 Score: 1 Record: 0
+Figure(640x480)
+Game: 34 Score: 1 Record: 0
+Figure(640x480)

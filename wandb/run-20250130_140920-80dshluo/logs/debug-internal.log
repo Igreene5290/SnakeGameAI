@@ -1,0 +1,7 @@
+{"time":"2025-01-30T14:09:20.5637767-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"C:\\Users\\igree\\Desktop\\CS4900\\PA1\\SnakeGameAI\\wandb\\run-20250130_140920-80dshluo\\logs\\debug-core.log"}
+{"time":"2025-01-30T14:09:20.6763052-05:00","level":"INFO","msg":"created new stream","id":"80dshluo"}
+{"time":"2025-01-30T14:09:20.6768263-05:00","level":"INFO","msg":"stream: started","id":"80dshluo"}
+{"time":"2025-01-30T14:09:20.6768263-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"80dshluo"}
+{"time":"2025-01-30T14:09:20.6768263-05:00","level":"INFO","msg":"sender: started","stream_id":"80dshluo"}
+{"time":"2025-01-30T14:09:20.6768263-05:00","level":"INFO","msg":"handler: started","stream_id":"80dshluo"}
+{"time":"2025-01-30T14:09:20.9585754-05:00","level":"INFO","msg":"Starting system monitor"}
