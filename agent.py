@@ -19,7 +19,7 @@ class Agent:
         self.epsilon = 0 # Randomness
         self.gamma = 0.9 # discount rate
         self.memory = deque(maxlen=MAX_MEMORY) # popleft()
-        self.model = Linear_QNet(11,256,3) 
+        self.model = Linear_QNet(14,256,3) 
         self.trainer = QTrainer(self.model,lr=LR,gamma=self.gamma)
         # for n,p in self.model.named_parameters():
         #     print(p.device,'',n) 
