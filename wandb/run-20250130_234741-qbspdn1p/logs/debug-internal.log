@@ -1,0 +1,15 @@
+{"time":"2025-01-30T23:47:41.5134512-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"C:\\Users\\igree\\Desktop\\CS4900\\PA1\\SnakeGameAI\\wandb\\run-20250130_234741-qbspdn1p\\logs\\debug-core.log"}
+{"time":"2025-01-30T23:47:41.6297329-05:00","level":"INFO","msg":"created new stream","id":"qbspdn1p"}
+{"time":"2025-01-30T23:47:41.6297329-05:00","level":"INFO","msg":"stream: started","id":"qbspdn1p"}
+{"time":"2025-01-30T23:47:41.6297329-05:00","level":"INFO","msg":"handler: started","stream_id":"qbspdn1p"}
+{"time":"2025-01-30T23:47:41.6297329-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"qbspdn1p"}
+{"time":"2025-01-30T23:47:41.6297329-05:00","level":"INFO","msg":"sender: started","stream_id":"qbspdn1p"}
+{"time":"2025-01-30T23:47:41.8686278-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-30T23:57:09.0517966-05:00","level":"INFO","msg":"stream: closing","id":"qbspdn1p"}
+{"time":"2025-01-30T23:57:09.0517966-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-30T23:57:09.0525828-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-30T23:57:09.514066-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-30T23:57:09.6999307-05:00","level":"INFO","msg":"handler: closed","stream_id":"qbspdn1p"}
+{"time":"2025-01-30T23:57:09.6999307-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qbspdn1p"}
+{"time":"2025-01-30T23:57:09.6999307-05:00","level":"INFO","msg":"sender: closed","stream_id":"qbspdn1p"}
+{"time":"2025-01-30T23:57:09.6999307-05:00","level":"INFO","msg":"stream: closed","id":"qbspdn1p"}

@@ -1,0 +1,28 @@
+False
+False
+False
+False
+C:\Users\igree\Desktop\CS4900\PA1\SnakeGameAI\model.py:37: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:257.)
+  state = torch.tensor(state,dtype=torch.float).to(device)
+Game: 1 Score: 0 Record: 0
+Game: 2 Score: 0 Record: 0
+Game: 3 Score: 1 Record: 0
+Game: 4 Score: 0 Record: 0
+Game: 5 Score: 0 Record: 0
+Game: 6 Score: 0 Record: 0
+Game: 7 Score: 0 Record: 0
+Game: 8 Score: 0 Record: 0
+Traceback (most recent call last):
+  File "C:\Users\igree\Desktop\CS4900\PA1\SnakeGameAI\agent.py", line 169, in <module>
+    train()
+    ~~~~~^^
+  File "C:\Users\igree\Desktop\CS4900\PA1\SnakeGameAI\agent.py", line 129, in train
+    reward, done, score = game.play_step(final_move)
+                          ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\igree\Desktop\CS4900\PA1\SnakeGameAI\snake_gameai.py", line 93, in play_step
+    self._update_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\igree\Desktop\CS4900\PA1\SnakeGameAI\snake_gameai.py", line 107, in _update_ui
+    pygame.display.flip()
+    ~~~~~~~~~~~~~~~~~~~^^
+KeyboardInterrupt

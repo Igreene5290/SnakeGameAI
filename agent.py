@@ -36,50 +36,85 @@ class Agent:
     # 
     # food left,food right,
     # food up, food down]
-    def get_state(self,game):
+    def get_state(self, game):
         head = game.snake[0]
-        point_l=Point(head.x - BLOCK_SIZE, head.y)
-        point_r=Point(head.x + BLOCK_SIZE, head.y)
-        point_u=Point(head.x, head.y - BLOCK_SIZE)
-        point_d=Point(head.x, head.y + BLOCK_SIZE)
-
+        
+        # Possible next positions
+        point_l = Point(head.x - BLOCK_SIZE, head.y)
+        point_r = Point(head.x + BLOCK_SIZE, head.y)
+        point_u = Point(head.x, head.y - BLOCK_SIZE)
+        point_d = Point(head.x, head.y + BLOCK_SIZE)
+        
+        # Snake movement direction
         dir_l = game.direction == Direction.LEFT
         dir_r = game.direction == Direction.RIGHT
         dir_u = game.direction == Direction.UP
         dir_d = game.direction == Direction.DOWN
 
+        # **Detect danger in all directions**
+        danger_straight = (dir_u and game.is_collision(point_u)) or \
+                        (dir_d and game.is_collision(point_d)) or \
+                        (dir_l and game.is_collision(point_l)) or \
+                        (dir_r and game.is_collision(point_r))
+
+        danger_right = (dir_u and game.is_collision(point_r)) or \
+                    (dir_d and game.is_collision(point_l)) or \
+                    (dir_l and game.is_collision(point_u)) or \
+                    (dir_r and game.is_collision(point_d))
+
+        danger_left = (dir_u and game.is_collision(point_l)) or \
+                    (dir_d and game.is_collision(point_r)) or \
+                    (dir_l and game.is_collision(point_d)) or \
+                    (dir_r and game.is_collision(point_u))
+
+        # **Track movement toward food (normalized difference)**
+        food_dx = (game.food.x - head.x) / BLOCK_SIZE
+        food_dy = (game.food.y - head.y) / BLOCK_SIZE
+        
+        # **Track tail proximity (danger in two steps)**
+        tail_danger_straight = (dir_u and game.is_collision(Point(point_u.x, point_u.y - BLOCK_SIZE))) or \
+                            (dir_d and game.is_collision(Point(point_d.x, point_d.y + BLOCK_SIZE))) or \
+                            (dir_l and game.is_collision(Point(point_l.x - BLOCK_SIZE, point_l.y))) or \
+                            (dir_r and game.is_collision(Point(point_r.x + BLOCK_SIZE, point_r.y)))
+
+        tail_danger_right = (dir_u and game.is_collision(Point(point_r.x + BLOCK_SIZE, point_r.y))) or \
+                            (dir_d and game.is_collision(Point(point_l.x - BLOCK_SIZE, point_l.y))) or \
+                            (dir_l and game.is_collision(Point(point_u.x, point_u.y - BLOCK_SIZE))) or \
+                            (dir_r and game.is_collision(Point(point_d.x, point_d.y + BLOCK_SIZE)))
+
+        tail_danger_left = (dir_u and game.is_collision(Point(point_l.x - BLOCK_SIZE, point_l.y))) or \
+                        (dir_d and game.is_collision(Point(point_r.x + BLOCK_SIZE, point_r.y))) or \
+                        (dir_l and game.is_collision(Point(point_d.x, point_d.y + BLOCK_SIZE))) or \
+                        (dir_r and game.is_collision(Point(point_u.x, point_u.y - BLOCK_SIZE)))
+
+        # **State Representation**
         state = [
-            # Danger Straight
-            (dir_u and game.is_collision(point_u))or
-            (dir_d and game.is_collision(point_d))or
-            (dir_l and game.is_collision(point_l))or
-            (dir_r and game.is_collision(point_r)),
+            # Immediate danger detection
+            danger_straight, 
+            danger_right, 
+            danger_left,
+            
+            # Tail danger detection
+            tail_danger_straight,
+            tail_danger_right,
+            tail_danger_left,
 
-            # Danger right
-            (dir_u and game.is_collision(point_r))or
-            (dir_d and game.is_collision(point_l))or
-            (dir_u and game.is_collision(point_u))or
-            (dir_d and game.is_collision(point_d)),
-
-            #Danger Left
-            (dir_u and game.is_collision(point_r))or
-            (dir_d and game.is_collision(point_l))or
-            (dir_r and game.is_collision(point_u))or
-            (dir_l and game.is_collision(point_d)),
-
-            # Move Direction
+            # Movement direction
             dir_l,
             dir_r,
             dir_u,
             dir_d,
 
-            #Food Location
-            game.food.x < game.head.x, # food is in left
-            game.food.x > game.head.x, # food is in right
-            game.food.y < game.head.y, # food is up
-            game.food.y > game.head.y  # food is down
+            # Food relative position
+            food_dx < 0,  # Food is left
+            food_dx > 0,  # Food is right
+            food_dy < 0,  # Food is up
+            food_dy > 0,  # Food is down
         ]
-        return np.array(state,dtype=int)
+        
+        return np.array(state, dtype=int)
+
+
 
     def remember(self,state,action,reward,next_state,done):
         self.memory.append((state,action,reward,next_state,done)) # popleft if memory exceed
@@ -110,7 +145,7 @@ class Agent:
         return final_move
 
 def train():
-    wandb.init(project="Snake-Game-Ai", name="training-run-1", sync_tensorboard=False)
+    wandb.init(project="Snake-Game-Ai", name="self-collision-fix", sync_tensorboard=False)
 
     plot_scores = []
     plot_mean_scores = []

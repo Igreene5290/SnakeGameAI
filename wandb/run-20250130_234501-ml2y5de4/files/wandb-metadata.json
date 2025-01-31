@@ -1,0 +1,31 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-01-31T04:45:01.536163Z",
+  "program": "C:\\Users\\igree\\Desktop\\CS4900\\PA1\\SnakeGameAI\\agent.py",
+  "codePath": "agent.py",
+  "git": {
+    "remote": "git@github.com:Igreene5290/SnakeGameAI.git",
+    "commit": "2ccb6d0a91dc62181a05f5138306fbe1b3cfd5af"
+  },
+  "email": "igreene5290@gmail.com",
+  "root": "C:\\Users\\igree\\Desktop\\CS4900\\PA1\\SnakeGameAI",
+  "host": "DESKTOP-QR0GP24",
+  "executable": "C:\\Python313\\python.exe",
+  "codePathLocal": "agent.py",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "998683701248",
+      "used": "852766212096"
+    }
+  },
+  "memory": {
+    "total": "17128087552"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  }
+}
